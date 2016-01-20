@@ -1,101 +1,71 @@
 <!doctype html>
 <html lang="ko">
+    <head>
+        <title>흙협 개발일지</title>
 
-<head>
-    <title>OneFunMan</title>
+        <!-- meta -->
+        <meta charset="utf-8" />
+        <meta name="author" content="OneFunMan" />
+        <meta name="dc.language" content="ko" />
+        <meta name="dc.license" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- meta -->
-    <meta charset="utf-8" />
-    <meta name="author" content="OneFunMan" />
-    <meta name="dc.language" content="ko" />
-    <meta name="dc.license" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- assets -->
+        <!--[if lt IE 9]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="./theme/css/mfb.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="./theme/css/main.css" type="text/css">
+        <link rel="stylesheet" href="./theme/css/pure.css" type="text/css">
+        <link rel="stylesheet" href="./theme/css/carpedm20.css" type="text/css">
+        <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css">
+    </head>
 
-    <!-- assets -->
-    <!--[if lt IE 9]>
-        <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link href="./theme/css/mfb.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./theme/css/main.css" type="text/css">
-    <link rel="stylesheet" href="./theme/css/pure.css" type="text/css">
-    <link rel="stylesheet" href="./theme/css/carpedm20.css" type="text/css">
-    <link rel="stylesheet" href="./theme/css/pygments.css" type="text/css">
-</head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href=".">흙협 개발일지</a></div>
+            <ul id="mainnav">
+                <li class="first"><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
 
-<body>
-    <div id="wrapper">
-        <div id="blogtitle"><a href=".">OneFunMan</a></div>
-        <ul id="mainnav">
-            <li class="first"><a href="/">home</a></li>
-            <li><a href="/archive/">archive</a></li>
-            <li><a href="/tags/">tags</a></li>
-            <li class="last"><a href="/about/">about me</a></li>
-        </ul>
+            <div class="clearboth"></div>
 
-        <div class="clearboth"></div>
+            <section id="content">
+                <article class="entry-overview">
+                    <div class="date">2016년 1월 20일</div>
+                    <div class="detail">
+                        <header><h2>
+                            [흙협 - 1] 페이스북 페이지에 제재 조치가 가해짐
+                        </h2></header>
+                        <img src="/images/ban.png">
+                        <div class="summary">
+                             중고나라와 뽐뿌에서 나눔글들을 1시간 주기로 파싱하여 Facebook API를 통해 페이지에 업로드하였다. 하루에 12번 주기적으로 글을 업로드하였는데
+                            하루~이틀정도 지나자 페이스북에서 봇으로 포스팅을 하는 것을 감지했는지 비공개 제재가 가해졌다. 아마도 일정한 시간 주기로 글을 포스팅하는 것이 
+                            문제인 것 같다. 해결방안으로 두 가지를 생각해볼 수 있는데 ubuntu server의 crontab에서 botEngine.py파일의 실행주기를 다양하게 변경해주는
+                            방법과 각 사이트에서 긁어온 나눔글의 수가 일정 수(약 15개) 이상이 됬을 때만 포스팅하게 하는 방법이 있다.
+                             현재 생각으로는 후자의 방법이 최선이라 생각하고 진행할 예정이며, 기존의 페이지를 삭제하고 다시 개설할 예정이다. 처음부터 순탄하지 않을 것이라 생각
+                            했지만 바로 봇이라 감지하고 페이스북에서 비공개 제재를 할 줄을 몰랐다. 수정 후 재개설하여 2~3일정도 추후 경과를 지켜봐야 할 것 같다.
+                            어느정도 안정적으로 페이지가 유지되면 보다 효과적인 방법으로 홍보를 할 생각이다. 그 구체적인 방안이 무엇일지는 계속 생각중에 있다.
+                        </div>
+                    </div>
+                </article>
+                <p class="paginator" style="float: right;">
+                    Page 1 / 1
+                </p>
+            </section>
+        </div>
 
-        <section id="content">
+        <div id="footer">
+          <p>Powered by <a href="http://blog.getpelican.com/">Pelican</a></p>
+        </div>
 
-        <article class="entry-overview">
-            <div class="date">7월 03, 2014</div>
-            <div class="detail">
-                <header><h2>
-                    <a href="./2014/neural-net-translation/" rel="bookmark">
-                        [번역] Neural Network를 이용한 손글씨 인지
-                    </a>
-                </h2></header>
-                <div class="summary">http://neuralnetworksanddeeplearning.com/ 에 올라온 챕터을 이해하고 기록하고자 번역을 시작한다. 번역의 속도를 높이기 위해 수많은 ...</div>
-                <div class="indextags">
-                        <a href="./tags/machine-learning/">#machine_learning</a>
-                        <a href="./tags/neural-network/">#neural_network</a>
-                        <a href="./tags/perceptron/">#perceptron</a>
-                        <a href="./tags/sigmoid-neuron/">#sigmoid_neuron</a>
-                </div>
-            </div>
-        </article>
-        <article class="entry-overview">
-            <div class="date">6월 29, 2014</div>
-            <div class="detail">
-                <header><h2>
-                    <a href="./2014/moved-blog-from-blogger/" rel="bookmark">
-                        Moved blog from blogger
-                    </a>
-                </h2></header>
-                <div class="summary">I moved my blog from blogger (http://carpedm20.blogspot.kr) to here.</div>
-                <div class="indextags">
-                        <a href="./tags/blog/">#blog</a>
-                </div>
-            </div>
-        </article>
-    <p class="paginator">
-        Page 1 / 1
-    </p>
-
-        </section>
-    </div>
-
-    <div id="footer">
-      <p>Powered by <a href="http://blog.getpelican.com/">Pelican</a></p>
-    </div>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-60954038-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="../theme/js/mfb.js"></script>
-    <script src="../theme/js/modernizr.touch.js"></script>
-    <script src="../theme/js/script.js"></script>
-
-
-</body>
-
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../theme/js/mfb.js"></script>
+        <script src="../theme/js/modernizr.touch.js"></script>
+        <script src="../theme/js/script.js"></script>
+    </body>
 </html>
